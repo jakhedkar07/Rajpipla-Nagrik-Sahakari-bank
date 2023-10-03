@@ -1,0 +1,59 @@
+
+body{
+    position: relative;
+    margin: 0;
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+}
+ul li {
+    list-style: none;
+    
+}
+
+ul a{
+    text-decoration: none;
+    color:aliceblue;
+}
+
+.Footer{
+    padding: 20px;
+    background-color: rgb(124, 51, 24);
+    color: aliceblue;
+    border-radius: 5px;
+   /* position: absolute; 
+   left: 0;
+   right: 0;
+   bottom: 0; */
+}
+
+#middle a{
+    text-decoration: none;
+    padding-bottom: 50px;
+    color: aliceblue;
+}
+
+.Footer i{
+    font-size: 40px;
+   margin: 10px;
+}
+
+#right{
+    text-align: center;
+    text-decoration: none;
+}
+
+#right a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+@media (max-width: 575px) {
+    /* Adjust the footer styles for small screens */
+    .footer {
+        align-items: left;
+        gap: 1000px;
+        /* Add styles for small screens here */
+    }
+}

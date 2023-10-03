@@ -1,0 +1,30 @@
+.sect{
+    color:"black";
+    padding:40px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.text{
+    width:50%;
+}
+.text h1{
+    color:#0059a1;
+}
+marquee{
+    color: aliceblue;
+}
+.info{
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* padding: 30px; */
+    gap: 50px;
+}
+.info h3{
+    color: black;
+}
+.info p{
+    color:#0059a1;
+}
