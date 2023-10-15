@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from "./vision.module.css";
 import {Link} from "react-router-dom";
+import { useTranslation, withTranslation } from 'react-i18next';
+import i18n from 'i18next';
 const Vision = () => {
   return (
     <>
@@ -8,17 +10,15 @@ const Vision = () => {
     <section className={styles.image}>
     <div className= {styles.h}>
       <ul  className={styles.header}>
-    <li><h1>Vision and Mission</h1></li>
+    <li><h1>{i18n.t('navbar.vision')}</h1></li>
 <div  className={styles.hh}>
-    <Link to="/"><li><h4>Home</h4></li></Link><li><h4>/Vision and Mission</h4></li>
+    <Link to="/"><li><h4>{i18n.t('navbar.home')}</h4></li></Link><li><h4>/{i18n.t('navbar.vision')}</h4></li>
     </div>
     </ul>
     </div>
     <div className={styles.para}>
     <p >
-    To delivering Banking products by consistent improvement of technology, process, more accessible and in a comfortable environment through committed and motivated workforce. To Provide delightful banking experience to all its customers.
-
-Bank is planing for all it services become online in future, trying for UPI and internet banking system.
+    {i18n.t('navbar.visionp')}
     </p>
     </div>
     </section>
@@ -27,4 +27,4 @@ Bank is planing for all it services become online in future, trying for UPI and 
   )
 }
 
-export default Vision
+export default withTranslation()(Vision)

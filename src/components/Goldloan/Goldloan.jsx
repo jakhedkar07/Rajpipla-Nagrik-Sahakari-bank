@@ -17,8 +17,8 @@ const Goldloan = () => {
 <div className={styles.info1}>
     <h2>Draw instant loan by pledging Gold Ornaments.</h2>
     <div className={styles.info2}>
-        <h2>Loan Amount for Councilor :  Rs. 10.00 Lac</h2>
-        <h2>Loan Amount for Non-Councilor :  Rs. 1.00 Lac</h2>
+        <h2>Loan Amount for member :  Rs. 10.00 Lac</h2>
+        <h2>Loan Amount for Non-member :  Rs. 1.00 Lac</h2>
         <div className={styles.info3}>
             <h2>Period :  12 Months.</h2>
             <div className={styles.info4}>
@@ -26,7 +26,14 @@ const Goldloan = () => {
 
                 
                             </div>
+                            <div className={styles.info4}>
+                <h2>Note:Savings Account compulsory and
+                               Subject to vary with time </h2>
+
+                
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
 

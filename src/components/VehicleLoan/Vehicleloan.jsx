@@ -17,30 +17,39 @@ const Vehicleloan = () => {
         <div className={styles.info3}>
             <h2>Primary Security : Hypothecation of Vehicle.</h2>
             <div className={styles.info4}>
-                <h2>Rate of Interest : For four wheeler loan</h2>
-
+                <h2>Rate of Interest : For four wheeler loan (commercial)
+                </h2>
                 <div className={styles.info5}>
-                    <h2>• 7 Years - 10.5%</h2>
+                    <h2>• 7 Years - 11.50%</h2>
                     <div className={styles.info6}>
-                        
                         <div className={styles.info7}>
-                            <h2>Rate of Interest : For Two wheeler loan</h2>
+                            <h2>Rate of Interest : For four wheeler loan (personal)</h2>
                             <div className={styles.info8}>
-                                    <h2>• 5 Years - 13.00%</h2>
+                                    <h2>• 7 Years - 8.50%</h2>
                                 <div className={styles.info9}>
+                                    <h2>Rate of Interest : For three wheeler loan</h2>
+                                <div className={styles.info10}>
+                                    <h2>• 7 Years - 12.50%</h2>
+                                    </div>  
+                                    <div className={styles.info9}>
+                                    <h2>Rate of Interest : For two wheeler loan (personal)</h2>
+                                    </div>
+                                <div className={styles.info12}>
+                                    <h2>• 5 Years - 13%</h2>
+                                    </div>     
                                 <div className={styles.info15}>
                                     <h2>For the Applicant/s.</h2>
                                 </div>
                                 <div className={styles.info16}>
-                                    <h2>•Income Proof</h2>
-                                    <h2>•Copy of I.T. Pan card.</h2> 
-                                    <h2>•Present Residential Address Proof.</h2> 
-                                    <h2>•Copy of  Sale Agreement in case of purchase of house property.</h2>
+                                   
+                                    <h2>•Copy of I.T. return(Latest 3 years)</h2> 
+                                   
                                     <h2>•Copy of  Driving license (In Force).</h2>
                                     <h2>•Residential Address Proof.</h2>
                                     <h2>•Proof  of  Residential Property owned by the applicant / member of the family.</h2>
                                     <h2>•Bank A/c Statement for the last six months.</h2>
-                                    <h2>•Statement of A/c for Loan / Advance facility availed from other Bank / F.I.</h2>
+                                    <h2>•CIBIL Report.</h2>
+                                    <h2>•Savings A/c compulsory.</h2>
                                 </div>
                                 <div className={styles.info17}> 
                                 <div className={styles.info19}>
@@ -52,15 +61,12 @@ const Vehicleloan = () => {
                                     <h2>•Residential Address Proof.</h2> 
                                     <h2>•Proof  of Residential  Property owned in their name.</h2>
                                 </div>
-                                <div className={styles.info21}>
-                                    <h2>Note :</h2>
-                                </div>
-                                <div className={styles.info22}>
-                                    <h2>•Title Search Report and Valuation Report from the Advocate and Valuer empaneled by the Bank is required to be produced on or before disbursement of the loan and fees for the same to be paid by the borrower.</h2>
-                                    <h2>•Stamp duty attracted for the mortgage deed and other agreement of loan to be paid by the borrower at the prevailing rates.</h2> 
-                                    <h2>•Other supportive papers/documents/proofs to be produced, if further  needed and asked by the Bank’s Advocate / Valuer / Bank.</h2> 
-                                </div>
+                               
                             </div>
+                            <div className={styles.info7}>
+                            <h2>Note : Subject to vary with time</h2>
+                            
+                        </div>
                         </div>
                     </div>
                 </div>

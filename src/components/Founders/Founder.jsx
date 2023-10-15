@@ -1,15 +1,17 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 import styles from "./founder.module.css"
+import { useTranslation, withTranslation } from 'react-i18next';
+import i18n from 'i18next';
 
-export const Founder = () => {
+ const Founder = () =>{
   return (
   <div className={styles.image}>
     <div className= {styles.h}>
       <ul  className={styles.header}>
-    <li><h1>Our Founders</h1></li>
+    <li><h1> {i18n.t('navbar.founder')}</h1></li>
 <div  className={styles.hh}>
-    <Link to="/"><li><h4>Home</h4></li></Link><li><h4>/Our Founders and Past directors</h4></li>
+    <Link to="/"><li><h4>{i18n.t('navbar.home')}</h4></li></Link><li><h4>/{i18n.t('navbar.founder')}</h4></li>
     </div>
     </ul>
     </div>
@@ -20,16 +22,15 @@ export const Founder = () => {
  First president from 1950 to 1956</h5>
         </div>
     <p >
-    Late Chandulal Vyas was pioneer of Nagarik Sahakari bank to establish cooperative activities of Rajpipla town and became first president of RNSBL.He was a High Court Pleader. Apart from this, he served as Deputy Diwan of Rajpipla State.After the independence of the country, he served as the President of Rajpipla Municipality and made an invaluable contribution to the development of the town. With his foresight, the vegetable market in Rajpipala was organized in his own way. In the first phase, he used his unique ideas to grow the bank out of financial difficulties.
+    {i18n.t('navbar.founderp')}
 
-Late Chandulal Mansukhram Vyas
-the first president from 1950 to 1956
+
     </p>
     </div>
     <div className={styles.para1}>
     
     <p >
-    To help out communinity of common man and enterprenure class people Late Mangaldas Parekh brought vision of cooperative bank. He served as Managing director for 27 years by continuing incredible work at RNSB. He also served as President ofGrain merchant Assocition as well as member of Rajpipla municiple cooperation . During the time of State he provided grocery stocks to people in second world war by serving as Cashier.
+    {i18n.t('navbar.founderp1')}
 
 
 
@@ -44,3 +45,5 @@ the first president from 1950 to 1956
     </div>
   )
 }
+
+export default withTranslation()(Founder)

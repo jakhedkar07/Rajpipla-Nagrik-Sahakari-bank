@@ -3,21 +3,23 @@ import { Link } from 'react-router-dom';
 import styles from './calculator.module.css';
 
 const Calculator = () => {
-  const [principal, setPrincipal] = useState(1000);
-  const [rate, setRate] = useState(5);
-  const [time, setTime] = useState(1);
+  const [loanAmount, setLoanAmount] = useState(1000);
+  const [interestRate, setInterestRate] = useState(5);
+  const [loanTerm, setLoanTerm] = useState(1);
   const [duration, setDuration] = useState('year');
-  const [result, setResult] = useState('');
+  const [emi, setEmi] = useState('');
 
-  const calculate = () => {
-    const p = Number(principal);
-    const r = Number(rate);
-    const t = Number(time);
-    const simpleInterest = duration === 'year' ? (p * r * t) / 100 : (p * r * t) / 1200;
-    const amount = p + simpleInterest;
-    setResult(
-      `Principal Amount: ${p.toFixed(2)}\nTotal Interest: ${simpleInterest.toFixed(2)}\nTotal Amount: ${amount.toFixed(2)}`
-    );
+  const calculateEMI = () => {
+    const p = Number(loanAmount);
+    const r = Number(interestRate);
+    const t = Number(loanTerm);
+    const n = duration === 'year' ? t * 12 : t;
+
+    const monthlyInterestRate = r / 12 / 100;
+    const emi =
+      (p * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -n));
+
+    setEmi(`EMI: ₹${emi.toFixed(2)}`);
   };
 
   return (
@@ -42,31 +44,31 @@ const Calculator = () => {
       <div className={styles.container}>
         <div className={styles.inputwrapper}>
           <div className={styles.wrapper}>
-            <label htmlFor="principal">Principal(₹):</label>
+            <label htmlFor="loanAmount">Loan Amount(₹):</label>
             <input
               type="number"
-              id="principal"
-              value={principal}
-              onChange={(e) => setPrincipal(e.target.value)}
+              id="loanAmount"
+              value={loanAmount}
+              onChange={(e) => setLoanAmount(e.target.value)}
             />
           </div>
           <div className={styles.wrapper}>
-            <label htmlFor="rate">Rate:</label>
+            <label htmlFor="interestRate">Interest Rate (%):</label>
             <input
               type="number"
-              id="rate"
-              value={rate}
-              onChange={(e) => setRate(e.target.value)}
+              id="interestRate"
+              value={interestRate}
+              onChange={(e) => setInterestRate(e.target.value)}
             />
           </div>
         </div>
-        <label htmlFor="time">Time:</label>
+        <label htmlFor="loanTerm">Loan Term:</label>
         <div className={styles.timewrapper}>
           <input
             type="number"
-            id={styles.time}
-            value={time}
-            onChange={(e) => setTime(e.target.value)}
+            id="loanTerm"
+            value={loanTerm}
+            onChange={(e) => setLoanTerm(e.target.value)}
           />
           <select
             name="duration"
@@ -78,9 +80,9 @@ const Calculator = () => {
             <option value="month">Month</option>
           </select>
         </div>
-        <button id={styles.btn}onClick={calculate}>Calculate</button>
         <div className={styles.result}>
-          <pre>{result}</pre>
+          <button id={styles.btn} onClick={calculateEMI}>Calculate EMI</button>
+          <p>{emi}</p>
         </div>
       </div>
     </section>

@@ -7,15 +7,15 @@ const Business = () => {
     <>
     <div className= {styles.h}>
       <ul  className={styles.header}>
-    <li><h1>Business loan</h1></li>
+    <li><h1>Business Loan</h1></li>
 <div  className={styles.hh}>
-    <Link to="/"><li><h4>Home</h4></li></Link><li><h4>/Business loan</h4></li>
+    <Link to="/"><li><h4>Home</h4></li></Link><li><h4>/Business Loan</h4></li>
     </div>
     </ul>
     </div>
     <div className={styles.information}>
         <div className={styles.info3}>
-            <h2>Primary Security : Hypothecation of Vehicle.</h2>
+           
             <div className={styles.info4}>
                 <h2>Rate of Interest :</h2>
 
@@ -29,35 +29,28 @@ const Business = () => {
                                     <h2>For the Applicant/s.</h2>
                                 </div>
                                 <div className={styles.info16}>
-                                    <h2>•Income Proof</h2>
-                                    <h2>•Copy of I.T. Pan card.</h2> 
-                                    <h2>•Present Residential Address Proof.</h2> 
-                                    <h2>•Copy of  Sale Agreement in case of purchase of house property.</h2>
-                                    <h2>•Copy of  Driving license (In Force).</h2>
-                                    <h2>•Residential Address Proof.</h2>
-                                    <h2>•Proof  of  Residential Property owned by the applicant / member of the family.</h2>
-                                    <h2>•Bank A/c Statement for the last six months.</h2>
-                                    <h2>•Statement of A/c for Loan / Advance facility availed from other Bank / F.I.</h2>
+                                <h2>•MSME licence</h2>
+                                <h2>•Copy of I.T. return(Latest 3 years)</h2> 
+                                    <h2>•Valuation Report(Authorized Valuer)</h2> 
+                                    <h2>• Two Photographs of candidate.</h2>
+                                    <h2>•CIBIL Report.</h2>
+                                    <h2>• Copy of PAN card/ Aadhar card (proof of recidence).</h2>
                                 </div>
                                 <div className={styles.info17}> 
                                 <div className={styles.info19}>
                                     <h2>For the Guarantor/s.</h2>
                                 </div>
                                 <div className={styles.info20}>
-                                    <h2>•Photo I.D.</h2>
-                                    <h2>•Income Proof.</h2> 
-                                    <h2>•Residential Address Proof.</h2> 
-                                    <h2>•Proof  of Residential  Property owned in their name.</h2>
+                                <h2>• Two Photographs</h2>
+                                <h2>•Copy of I.T. return(Last 1 year)</h2> 
+                                  <h2>• Copy of PAN card/ Aadhar card (proof of recidence).</h2>
                                 </div>
-                                <div className={styles.info21}>
-                                    <h2>Note :</h2>
-                                </div>
-                                <div className={styles.info22}>
-                                    <h2>•Title Search Report and Valuation Report from the Advocate and Valuer empaneled by the Bank is required to be produced on or before disbursement of the loan and fees for the same to be paid by the borrower.</h2>
-                                    <h2>•Stamp duty attracted for the mortgage deed and other agreement of loan to be paid by the borrower at the prevailing rates.</h2> 
-                                    <h2>•Other supportive papers/documents/proofs to be produced, if further  needed and asked by the Bank’s Advocate / Valuer / Bank.</h2> 
-                                </div>
+                              
                             </div>
+                            <div className={styles.info7}>
+                            <h2>Note : Subject to vary with time</h2>
+                            
+                        </div>
                         </div>
                     </div>
                 </div>

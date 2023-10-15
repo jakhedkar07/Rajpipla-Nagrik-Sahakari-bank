@@ -8,7 +8,8 @@ import React from 'react'
     <>
 
     <div className={styles.contact}>
-      <div>
+      <div className={styles.left}>
+        <div >
       <header>
         <h1>CONTACT US</h1>
         <p>LET’S CONNECT: WE’RE HERE TO HELP, AND WE’D LOVE TO HEAR FROM YOU! WHETHER YOU HAVE A QUESTION, COMMENT, OR JUST WANT TO CHAT , YOU CAN REACH OUT TO US THROUGH THE CONTACT FORM OF THIS PAGE, OR BY PHONE, EMAIL, OR SOCIAL MEDIA. </p>
@@ -35,13 +36,14 @@ import React from 'react'
       <div className={styles.buttons}>
         <button>Submit</button>
     </div>
+    </div>
       </div>
       </div>
+      <div className={styles.right}>
       <img src="./images/Service 24_7-pana 1.svg" alt="" />
       </div>
-     <div>
-
-     </div>
+      
+    </div>
     </>
   )
 }

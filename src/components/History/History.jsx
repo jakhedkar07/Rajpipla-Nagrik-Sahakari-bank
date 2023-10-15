@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from "./history.module.css";
 import {Link} from "react-router-dom";
+import { useTranslation, withTranslation } from 'react-i18next';
+import i18n from 'i18next';
 const History = () => {
   return (
     <>
@@ -8,15 +10,17 @@ const History = () => {
     <section className={styles.image}>
     <div className= {styles.h}>
       <ul  className={styles.header}>
-    <li><h1>History</h1></li>
+    <li><h1>{i18n.t('navbar.History')}</h1></li>
 <div  className={styles.hh}>
-    <Link to="/"><li><h4>Home</h4></li></Link><li><h4>/History</h4></li>
+    <Link to="/"><li><h4>{i18n.t('navbar.home')}</h4></li></Link><li><h4>/{i18n.t('navbar.History')}</h4></li>
     </div>
     </ul>
     </div>
     <div className={styles.para}>
+      
+      <p>{i18n.t('navbar.Historyp')}</p>
     <p >
-    Late Chandulal Vyas was pioneer of nagarik sahakari bank to establish cooperative activities of Rajpipla town and became first president of RNSBL.He was a High Court Pleader. Apart from this, he served as Deputy Diwan of Rajpipla State.After the independence of the country, he served as the President of Rajpipla Municipality and made an invaluable contribution to the development of the town. With his foresight, the vegetable market in Rajpipala was organized in his own way. In the first phase, he used his unique ideas to grow the bank out of financial difficulties.
+    {i18n.t('navbar.Historyp1')}
     </p>
     </div>
     </section>
@@ -25,4 +29,4 @@ const History = () => {
   )
 }
 
-export default History
+export default withTranslation()(History)

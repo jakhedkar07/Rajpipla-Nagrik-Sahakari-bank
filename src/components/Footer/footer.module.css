@@ -18,19 +18,22 @@ ul a{
 }
 
 .Footer{
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px; */
     background-color: rgb(124, 51, 24);
     color: aliceblue;
     border-radius: 5px;
-   /* position: absolute; 
-   left: 0;
-   right: 0;
-   bottom: 0; */
+    font-size:x-large;
+    padding-top:10px ;
+    /* margin-top: -100px; */
+
+   
 }
 
 #middle a{
     text-decoration: none;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
     color: aliceblue;
 }
 
@@ -51,9 +54,23 @@ ul a{
 
 @media (max-width: 575px) {
     /* Adjust the footer styles for small screens */
-    .footer {
-        align-items: left;
+    .Footer {
+        align-items: center;
+        display: flex;
+        flex-direction: column-reverse;
         gap: 1000px;
         /* Add styles for small screens here */
     }
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+    #right{
+        display: none;
+    }
+    #left{
+        order: 1;
+        color:  black;
+    }
+   
 }
