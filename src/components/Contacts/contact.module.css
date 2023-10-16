@@ -9,7 +9,7 @@
     display: flex;
   }
   
-header *{
+header {
     font-family: 'Poppins', sans-serif;
     color: black;
     width: 50vw;
@@ -39,19 +39,19 @@ header p{
     gap: 30px;
 }
 
-button{
+.buttons button{
     background-color: black;
     color: aliceblue;
-    width:13.75em;
+    width: 7rem;
     padding: 10px;
     border-radius: 5px;
-    /* gap: 32px; */
+    gap: 32px;
 }
 
 .buttons {
     display: flex;
     gap: 32px;
- /* margin: 0 auto; */
+ margin: 0 auto;
  padding: 0px;
  justify-content: center;
  align-items: center;
@@ -106,7 +106,39 @@ button{
         display: none;
     }
     .left{
+        display: flex;
         width: 100%;
-        padding: 0px;
+        padding: 30px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    .contact{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    header{
+        width: 100%;
+    }
+}
+
+@media  (max-width:400px){
+    .right{
+        display: none;
+    }
+    .left{
+        display: flex;
+        width: 100%;
+        padding: auto;
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+    }
+    .contact{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 }

@@ -9,7 +9,7 @@ const Financial = () => {
       <ul  className={styles.header}>
     <li><h1>Financial highlights</h1></li>
 <div  className={styles.hh}>
-    <Link to="/"><li><h4>Home</h4></li></Link><li><h4>/Financial Highlights</h4></li>
+    <Link to="/"><li><h4>{i18n.t('navbar.home')}</h4></li></Link><li><h4>/Financial Highlights</h4></li>
     </div>
     </ul>
     </div>

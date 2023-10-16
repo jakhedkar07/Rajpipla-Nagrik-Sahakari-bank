@@ -32,40 +32,40 @@ function Home({ t }) {
   <section className={styles.sect}>
     <div className={styles.text}>
       <header>
-    <h1>{i18n.t('home.tb')}</h1>
+    <h2>{i18n.t('home.tb')}</h2>
     <h2>{i18n.t('home.tb1')}</h2>
     </header>
     <div className={styles.info}>
       <div >
-      <h3>Net Profit</h3>
+      <h4>Net Profit</h4>
       <p>₹ 33,84,752.12</p>
       </div>
       <div >
-      <h3>Reserve Funds</h3>
+      <h4>Reserve Funds</h4>
       <p>₹ 4,19,53,569</p>
       </div>
     
     
     
       <div >
-      <h3>Deposits</h3>
+      <h4>Deposits</h4>
       <p>₹ 68,30,26,702</p>
       </div>
      
       <div >
-      <h3>Working Capital</h3>
+      <h4>Working Capital</h4>
       <p>₹ 84,71,47,468</p>
       </div>
       <div >
-      <h3>Share Capital</h3>
+      <h4>Share Capital</h4>
       <p>₹ 1,03,09,150</p>
       </div>
       <div >
-      <h3>Share Holder</h3>
+      <h4>Share Holder</h4>
       <p>₹ 12,422</p>
       </div>
       <div>
-      <h3>Loans & Advances</h3>
+      <h4>Loans & Advances</h4>
       <p>₹ 38,91,92,777</p>
       </div>
      

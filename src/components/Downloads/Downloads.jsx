@@ -2,145 +2,147 @@
 import React from 'react';
 import styles from "./downloads.module.css";
 import {Link} from "react-router-dom";
-const Downloads= () => {
+import { useTranslation, withTranslation } from 'react-i18next';
+import i18n from 'i18next';
+const Downloads= ({t}) => {
   return (
     <>
 
     <section className={styles.image}>
     <div className= {styles.h}>
       <ul  className={styles.header}>
-    <li><h1>Downloads</h1></li>
+    <li><h1> {t("navbar.downloads")}</h1></li>
 <div  className={styles.hh}>
-    <Link to="/"><li><h4>Home</h4></li></Link><li><h4>/Downloads</h4></li>
+    <Link to="/"><li><h4>{i18n.t('navbar.home')}</h4></li></Link><li><h4>/ {t("navbar.downloads")}</h4></li>
     </div>
     </ul>
     </div>
     <div className={styles.downloads}>
     <div className={styles.report}>
-      <h2>Savings A/c(pay slip)</h2>
+    <h2>{i18n.t('Downloads.Savings A/c form')}</h2>
       <div className={styles.links}>
-      <a href="/images/pdf/saving acc pay slip.pdf" target="_blank" rel="noopener noreferrer">
-              View PDF
+      <a href="/images/account opning form.pdf" target="_blank" rel="noopener noreferrer">
+      {i18n.t('Downloads.View PDF')}
             </a>
-      <a href="/images/pdf/saving acc pay slip.pdf" target="_blank" download>Download</a>
+      <a href="/images/account opning form.pdf" target="_blank" download> {t('Downloads.D')}</a>
       </div>
     </div>
     <div className={styles.report}>
-      <h2>Current A/c form</h2>
+      <h2>{i18n.t('Downloads.CA')}</h2>
       <div className={styles.links}>
-      <a href="/images/pdf/current account.pdf" target="_blank" rel="noopener noreferrer">
-              View PDF
+      <a href="/images/account opning form.pdf" target="_blank" rel="noopener noreferrer">
+      {t('Downloads.View PDF')}
             </a>
-      <a href="/images/pdf/current account.pdf" target="_blank" download>Download</a>
+      <a href="/images/account opning form.pdf" target="_blank" download>{t('Downloads.D')}</a>
       </div>
     </div>
     <div className={styles.report}>
-      <h2>Recurring A/c form</h2>
+      <h2>{i18n.t('Downloads.RA')}</h2>
       <div className={styles.links}>
-      <a href="/images/recurring opening.pdf" target="_blank" rel="noopener noreferrer">
-              View PDF
+      <a href="/images/account opning form.pdf" target="_blank" rel="noopener noreferrer">
+      {i18n.t('Downloads.View PDF')}
             </a>
-      <a href="/path-to-your-pdf-file.pdf" target="_blank" download>Download </a>
+      <a href="/images/account opning form.pdf" target="_blank" download>{i18n.t('Downloads.D')} </a>
       </div>
     </div>
     <div className={styles.report}>
-      <h2>KYC application form</h2>
+      <h2>{t('Downloads.Ac')}</h2>
       <div className={styles.links}>
-      <a href="/images/pdf/kyc form.pdf" target="_blank" rel="noopener noreferrer">
-              View PDF
+      <a href="/images/account closing form.pdf" target="_blank" rel="noopener noreferrer">
+      {t('Downloads.View PDF')}
             </a>
-      <a href="/images/pdf/kyc form.pdf" target="_blank" download>Download </a>
+      <a href="/images/account closing form.pdf" target="_blank" download>{i18n.t('Downloads.D')} </a>
       </div>
     </div>
     <div className={styles.report}>
-      <h2>Fixed deposit form</h2>
+      <h2>{i18n.t('Downloads.Cv')}</h2>
       <div className={styles.links}>
-      <a href="/images/pdf/F.D spesimen card.pdf" target="_blank" rel="noopener noreferrer">
-              View PDF
+      <a href="/images/cash vidroal form.pdf" target="_blank" rel="noopener noreferrer">
+      {i18n.t('Downloads.View PDF')}
             </a>
-      <a href="/images/pdf/F.D spesimen card.pdf" target="_blank" download>Download </a>
+      <a href="/images/cash vidroal form.pdf" target="_blank" download>{t('Downloads.D')}</a>
       </div>
     </div>
     <div className={styles.report}>
-      <h2>Account opening form</h2>
+      <h2>CO/CC/OF/HYP</h2>
       <div className={styles.links}>
-      <a href="/images/pdf/account opening form.pdf" target="_blank" rel="noopener noreferrer">
-              View PDF
+      <a href="/images/CO  CC  OF  HYP.pdf" target="_blank" rel="noopener noreferrer">
+      {i18n.t('Downloads.View PDF')}
             </a>
-      <a href="/images/pdf/account opening form.pdf" target="_blank" download>Download </a>
+      <a href="/images/CO  CC  OF  HYP.pdf" target="_blank" download>{t('Downloads.D')} </a>
       </div>
     </div>
     <div className={styles.report}>
-      <h2>Account closing form</h2>
+      <h2> {i18n.t('Downloads.Gl')}</h2>
       <div className={styles.links}>
-      <a href="/images/pdf/account closing form.pdf" target="_blank" rel="noopener noreferrer">
-              View PDF
+      <a href="/images/gold loan form.pdf" target="_blank" rel="noopener noreferrer">
+      {i18n.t('Downloads.View PDF')}
             </a>
-      <a href="/images/pdf/account closing form.pdf" target="_blank" download>Download </a>
+      <a href="/images/gold loan form.pdf" target="_blank" download>{t('Downloads.D')} </a>
       </div>
     </div>
     <div className={styles.report}>
-      <h2>RTGS/NEFT form</h2>
+      <h2>{t('Downloads.Hl')}</h2>
       <div className={styles.links}>
-      <a href="/images/pdf/rtgs neft form.pdf" target="_blank" rel="noopener noreferrer">
-              View PDF
+      <a href="/images/home loan, business loan and cash cradit form.pdf" target="_blank" rel="noopener noreferrer">
+      {t('Downloads.View PDF')}
             </a>
-      <a href="/images/pdf/rtgs neft form.pdf" target="_blank" download>Download </a>
+      <a href="/images/home loan, business loan and cash cradit form.pdf" target="_blank" download>{t('Downloads.D')} </a>
       </div>
     </div>
     <div className={styles.report}>
-      <h2>Gold loan form</h2>
+      <h2>{i18n.t('Downloads.Ky')}</h2>
       <div className={styles.links}>
-      <a href="/images/pdf/gold loan form.pdf" target="_blank" rel="noopener noreferrer">
-              View PDF
+      <a href="/images/kyc form.pdf" target="_blank" rel="noopener noreferrer">
+      {t('Downloads.View PDF')}
             </a>
-      <a href="/images/pdf/gold loan form.pdf" target="_blank" download>Download </a>
+      <a href="/images/kyc form.pdf" target="_blank" download>{t('Downloads.D')} </a>
       </div>
     </div>
     <div className={styles.report}>
-      <h2>Home loan,Business loan & Cash credit</h2>
+      <h2>{t('Downloads.SB')}</h2>
       <div className={styles.links}>
-      <a href="/images/pdf/home loan, business loan and cash credit form.pdf" target="_blank" rel="noopener noreferrer">
-              View PDF
+      <a href="/images/reciving slip SB  CA  RD.pdf" target="_blank" rel="noopener noreferrer">
+      {i18n.t('Downloads.View PDF')}
             </a>
-      <a href="/images/pdf/home loan, business loan and cash credit form.pdf" target="_blank" download>Download </a>
+      <a href="/images/reciving slip SB  CA  RD.pdf" target="_blank" download>{i18n.t('Downloads.D')}</a>
+      </div>
+    </div>
+    <div className={styles.report}>
+      <h2>{i18n.t('Downloads.RT')}</h2>
+      <div className={styles.links}>
+      <a href="/images/rtgs neft form.pdf" target="_blank" rel="noopener noreferrer">
+      {t('Downloads.View PDF')}
+            </a>
+      <a href="/images/rtgs neft form.pdf" target="_blank" download>{t('Downloads.D')} </a>
+      </div>
+    </div>
+    <div className={styles.report}>
+      <h2>{t('Downloads.SP')}</h2>
+      <div className={styles.links}>
+      <a href="/images/share purchase form.pdf" target="_blank" rel="noopener noreferrer">
+      {t('Downloads.View PDF')}
+            </a>
+      <a href="/images/share purchase form.pdf" target="_blank" download>{t('Downloads.D')} </a>
       </div>
     </div>
     
     <div className={styles.report}>
-      <h2>Locker opening form</h2>
+      <h2>{t('Downloads.CS')}</h2>
       <div className={styles.links}>
-      <a href="/images/pdf/locker aggrement.pdf" target="_blank" rel="noopener noreferrer">
-              View PDF
+      <a href="/images/form for changos in share.pdf" target="_blank" rel="noopener noreferrer">
+      {i18n.t('Downloads.View PDF')}
             </a>
-      <a href="/images/pdf/locker aggrement.pdf" target="_blank" download>Download </a>
+      <a href="/images/form for changos in share.pdf" target="_blank" download>{i18n.t('Downloads.D')} </a>
       </div>
     </div>
     <div className={styles.report}>
-      <h2>Share Purchase form</h2>
+      <h2>{i18n.t('Downloads.LF')}</h2>
       <div className={styles.links}>
-      <a href="/images/pdf/share purchase form.pdf" target="_blank" rel="noopener noreferrer">
-              View PDF
+      <a href="/images/locar aggriment.pdf" target="_blank" rel="noopener noreferrer">
+      {i18n.t('Downloads.View PDF')}
             </a>
-      <a href="/images/pdf/share purchase form.pdf" target="_blank" download>Download </a>
-      </div>
-    </div>
-    <div className={styles.report}>
-      <h2>Changes in Share form</h2>
-      <div className={styles.links}>
-      <a href="/images/pdf/form for changes in share.pdf" target="_blank" rel="noopener noreferrer">
-              View PDF
-            </a>
-      <a href="/images/pdf/form for changes in share.pdf" target="_blank" download>Download </a>
-      </div>
-    </div>
-    <div className={styles.report}>
-      <h2>Safe Deposit Chamber</h2>
-      <div className={styles.links}>
-      <a href="/images/pdf/safe deposit chamber.pdf" target="_blank" rel="noopener noreferrer">
-              View PDF
-            </a>
-      <a href="/images/pdf/safe deposit chamber.pdf" target="_blank" download>Download </a>
+      <a href="/images/locar aggriment.pdf" target="_blank" download>{i18n.t('Downloads.D')} </a>
       </div>
     </div>
     </div>
@@ -149,4 +151,4 @@ const Downloads= () => {
   );
 }
 
-export default Downloads
+export default withTranslation()(Downloads)

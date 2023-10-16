@@ -1,55 +1,56 @@
 import React from 'react'
 import styles from "./solar.module.css";
 import { Link } from 'react-router-dom';
-
-const Solar = () => {
+import i18n from "i18next";
+import { withTranslation } from "react-i18next";
+const Solar = ({t}) => {
   return (
     <>
     <div className= {styles.h}>
       <ul  className={styles.header}>
-    <li><h1>Solar Roof-top loan</h1></li>
+    <li><h1>  {i18n.t("navbar.SL")}</h1></li>
 <div  className={styles.hh}>
-    <Link to="/"><li><h4>Home</h4></li></Link><li><h4>/Solar Roof-top loan</h4></li>
+    <Link to="/"><li><h4>{i18n.t('navbar.home')}</h4></li></Link><li><h4>/  {i18n.t("navbar.SL")}</h4></li>
     </div>
     </ul>
     </div>
     <div className={styles.information}>
             <div className={styles.info4}>
-                <h2>Rate of Interest :</h2>
+            <h2>{i18n.t('Solar.SRI')}</h2>
 
-                <div className={styles.info5}>
-                    <h2>• 3 Years - 11.50%</h2>
-                    <div className={styles.info6}>
-                        
-                        <div className={styles.info7}>
-                                <div className={styles.info9}>
-                                <div className={styles.info15}>
-                                <h2>For the Applicant/s.</h2>
-                                </div>
-                                <div className={styles.info16}>
-                                   
-                                    <h2>•Copy of I.T. return(Latest 3 years)</h2> 
-                                   
-                                    <h2>•Electricity bill</h2>
-                                    <h2>•Residential Address Proof.</h2>
-                                    <h2>•Proof  of  Residential Property owned by the applicant / member of the family.</h2>
-                                    <h2>•Bank A/c Statement for the last six months.</h2>
-                                    <h2>•Savings A/c compulsory.</h2>
-                                    <h2>•Quotation</h2>
-                                </div>
-                                <div className={styles.info17}> 
-                                <div className={styles.info19}>
-                                    <h2>For the Guarantor/s.</h2>
-                                </div>
-                                <div className={styles.info20}>
-                                    <h2>•Photo I.D.</h2>
-                                    <h2>•Income Proof.</h2> 
-                                    <h2>•Residential Address Proof.</h2> 
-                                    <h2>•Proof  of Residential  Property owned in their name.</h2>
-                                </div>
-                            </div>
-                            <div className={styles.info7}>
-                            <h2>Note : Subject to vary with time</h2>
+<div className={styles.info5}>
+    <h2>{i18n.t('Solar.SY')}</h2>
+    <div className={styles.info6}>
+        
+        <div className={styles.info7}>
+                <div className={styles.info9}>
+                <div className={styles.info15}>
+                <h2>{i18n.t('Solar.SFA')}</h2>
+                </div>
+                <div className={styles.info16}>
+                   
+                    <h2>{i18n.t('Solar.SCIR')}</h2> 
+                   
+                    <h2>{i18n.t('Solar.SEB')}</h2>
+                    <h2>{i18n.t('Solar.SRAP')}</h2>
+                    <h2>{i18n.t('Solar.SPRF')}</h2>
+                    <h2>{i18n.t('Solar.SBSL')}</h2>
+                    <h2>{i18n.t('Solar.SAC')}</h2>
+                    <h2>{i18n.t('Solar.SQ')}</h2>
+                </div>
+                <div className={styles.info17}> 
+                <div className={styles.info19}>
+                    <h2>{i18n.t('Solar.SFG')}</h2>
+                </div>
+                <div className={styles.info20}>
+                    <h2>{i18n.t('Solar.SP')}</h2>
+                    <h2>{i18n.t('Solar.SIP')}</h2> 
+                    <h2>{i18n.t('Solar.SRAP')}</h2> 
+                    <h2>{i18n.t('Solar.SPRP')}</h2>
+                </div>
+            </div>
+            <div className={styles.info7}>
+            <h2>{i18n.t('Solar.SNS')}</h2>
                             
                         </div>
                         </div>
@@ -67,4 +68,4 @@ const Solar = () => {
   )
 }
 
-export default Solar
+export default withTranslation()(Solar)

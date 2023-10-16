@@ -1,70 +1,71 @@
 import React from 'react'
 import styles from "./Vehicleloan.module.css";
 import { Link } from 'react-router-dom';
-
+import i18n from "i18next";
+import { withTranslation } from "react-i18next";
 const Vehicleloan = () => {
   return (
     <>
     <div className= {styles.h}>
       <ul  className={styles.header}>
-    <li><h1>Vehicle Loan </h1></li>
+    <li><h1>{i18n.t('Vehicleloan.VL')} </h1></li>
 <div  className={styles.hh}>
-    <Link to="/"><li><h4>Home</h4></li></Link><li><h4>/Vehicle Loan </h4></li>
+    <Link to="/"><li><h4>{i18n.t('navbar.home')}</h4></li></Link><li><h4>/{i18n.t('Vehicleloan.VL')} </h4></li>
     </div>
     </ul>
     </div>
     <div className={styles.information}>
         <div className={styles.info3}>
-            <h2>Primary Security : Hypothecation of Vehicle.</h2>
+            <h2>{i18n.t('Vehicleloan.VPS')} </h2>
             <div className={styles.info4}>
-                <h2>Rate of Interest : For four wheeler loan (commercial)
+                <h2>{i18n.t('Vehicleloan.VRI')} 
                 </h2>
                 <div className={styles.info5}>
-                    <h2>• 7 Years - 11.50%</h2>
+                    <h2>{i18n.t('Vehicleloan.VY')} </h2>
                     <div className={styles.info6}>
                         <div className={styles.info7}>
-                            <h2>Rate of Interest : For four wheeler loan (personal)</h2>
+                            <h2>{i18n.t('Vehicleloan.VRIP')} </h2>
                             <div className={styles.info8}>
-                                    <h2>• 7 Years - 8.50%</h2>
+                                    <h2>{i18n.t('Vehicleloan.VYT')} </h2>
                                 <div className={styles.info9}>
-                                    <h2>Rate of Interest : For three wheeler loan</h2>
+                                    <h2>{i18n.t('Vehicleloan.VRIF')} </h2>
                                 <div className={styles.info10}>
-                                    <h2>• 7 Years - 12.50%</h2>
+                                    <h2>{i18n.t('Vehicleloan.VYTH')} </h2>
                                     </div>  
                                     <div className={styles.info9}>
-                                    <h2>Rate of Interest : For two wheeler loan (personal)</h2>
+                                    <h2>{i18n.t('Vehicleloan.VRIFT')} </h2>
                                     </div>
                                 <div className={styles.info12}>
-                                    <h2>• 5 Years - 13%</h2>
+                                    <h2>{i18n.t('Vehicleloan.VYF')} </h2>
                                     </div>     
                                 <div className={styles.info15}>
-                                    <h2>For the Applicant/s.</h2>
+                                    <h2>{i18n.t('Vehicleloan.VFA')} </h2>
                                 </div>
                                 <div className={styles.info16}>
                                    
-                                    <h2>•Copy of I.T. return(Latest 3 years)</h2> 
+                                    <h2>{i18n.t('Vehicleloan.VCIT')} </h2> 
                                    
-                                    <h2>•Copy of  Driving license (In Force).</h2>
-                                    <h2>•Residential Address Proof.</h2>
-                                    <h2>•Proof  of  Residential Property owned by the applicant / member of the family.</h2>
-                                    <h2>•Bank A/c Statement for the last six months.</h2>
-                                    <h2>•CIBIL Report.</h2>
-                                    <h2>•Savings A/c compulsory.</h2>
+                                    <h2>{i18n.t('Vehicleloan.VCD')} </h2>
+                                    <h2>{i18n.t('Vehicleloan.VRA')} </h2>
+                                    <h2>{i18n.t('Vehicleloan.VPRP')} </h2>
+                                    <h2>{i18n.t('Vehicleloan.VBAC')} </h2>
+                                    <h2>{i18n.t('Vehicleloan.VCIBL')} </h2>
+                                    <h2>{i18n.t('Vehicleloan.VSA')} </h2>
                                 </div>
                                 <div className={styles.info17}> 
                                 <div className={styles.info19}>
-                                    <h2>For the Guarantor/s.</h2>
+                                    <h2>{i18n.t('Vehicleloan.VFG')} </h2>
                                 </div>
                                 <div className={styles.info20}>
-                                    <h2>•Photo I.D.</h2>
-                                    <h2>•Income Proof.</h2> 
-                                    <h2>•Residential Address Proof.</h2> 
-                                    <h2>•Proof  of Residential  Property owned in their name.</h2>
+                                    <h2>{i18n.t('Vehicleloan.VP')} </h2>
+                                    <h2>{i18n.t('Vehicleloan.VI')} </h2> 
+                                    <h2>{i18n.t('Vehicleloan.VRAP')} </h2> 
+                                    <h2>{i18n.t('Vehicleloan.VPPT')} </h2>
                                 </div>
                                
                             </div>
                             <div className={styles.info7}>
-                            <h2>Note : Subject to vary with time</h2>
+                            <h2>{i18n.t('Vehicleloan.VN')} </h2>
                             
                         </div>
                         </div>
@@ -80,4 +81,4 @@ const Vehicleloan = () => {
   )
 }
 
-export default Vehicleloan
+export default withTranslation()(Vehicleloan)

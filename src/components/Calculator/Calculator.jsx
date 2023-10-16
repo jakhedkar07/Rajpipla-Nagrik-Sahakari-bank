@@ -32,7 +32,7 @@ const Calculator = () => {
           <div className={styles.hh}>
             <Link to="/">
               <li>
-                <h4>Home</h4>
+                <h4>{i18n.t('navbar.home')}</h4>
               </li>
             </Link>
             <li>

@@ -72,9 +72,9 @@ function App() {
           <Route path="/Goldloan" element={<Goldloan/>}/>
           <Route path="/Vehicleloan" element={<Vehicleloan/>}/>
           <Route path="/Nsckvp" element={<Nsckvp/>}/>
-          <Route path="/Houseloan" element={<Houseloan  title="Home Loan(For Commercial Construction)" tenure="20 Years" interestrate="11.50%"/>}/>
-          <Route path="/Houseloan1" element={<Houseloan  title="Home Loan(For New Construction)" tenure="20 Years" interestrate="9.5%"/>}/>
-          <Route path="/Houseloan2" element={<Houseloan  title="Home Loan -Repairing" tenure="10 Years" interestrate="11%"/>}/>
+          <Route path="/Houseloan" element={<Houseloan  title={i18n.t("navbar.HL1")} tenure="20 Years" interestrate="11.50%"/>}/>
+          <Route path="/Houseloan1" element={<Houseloan  title=  {i18n.t("navbar.HL2")}tenure="20 Years" interestrate="9.5%"/>}/>
+          <Route path="/Houseloan2" element={<Houseloan  title=   {i18n.t("navbar.HL3")} tenure="10 Years" interestrate="11%"/>}/>
           <Route path="/Business" element={<Business/>}/>
           <Route path="/Education" element={<Education/>}/>
           <Route path="/Solar" element={<Solar/>}/>

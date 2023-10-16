@@ -40,7 +40,8 @@ const mediaItems = [
   './images/16.jpg',
   './images/17.jpg',
   './images/18.jpg',
-  './images/video.mp4', // Add video file path
+  "https://www.youtube.com/embed/qHweADkrraw"
+  // './images/video.mp4', // Add video file path
 ];
 
 const Gallery = () => {
@@ -53,6 +54,8 @@ const Gallery = () => {
   const closeMediaModal = () => {
     setSelectedMedia(null);
   };
+
+ 
 
   return (
     <>
@@ -78,11 +81,8 @@ const Gallery = () => {
           <div className={styles.list}>
             {mediaItems.map((media, index) => (
               <div className={styles.content} key={index} onClick={() => openMediaModal(media)}>
-                {media.endsWith('.mp4') ? ( // Check if it's a video file
-                  <video width="450px" height="250px" controls>
-                    <source src={media} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+              {media.includes('youtube') ? ( // Check if it's a video file
+                 <iframe width="400px" height="250" src="https://www.youtube.com/embed/mxUTm9FTsug" title="Address by Hon&#39;ble Minister of Home and Cooperation Sh. Amitbhai Shah on Felicitation Event, NAFCUB." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 ) : (
                   <img src={media} alt={`Media ${index + 1}`} />
                 )}
@@ -113,14 +113,17 @@ const Gallery = () => {
   <div className={styles.closeButton} onClick={closeMediaModal}>
     <span className={styles.closeIcon}>X</span>
   </div>
-  {selectedMedia && selectedMedia.endsWith('.mp4') ? (
-    <video width="100%" height="100%" controls>
-      <source src={selectedMedia} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+  
+  {selectedMedia && selectedMedia.media?.includes('youtube') ? (
+  
+    <iframe width="100%" height="100%" src={selectedMedia}  title="Dil Se India | Salman Khan is Pumped Up for the #GreatestRivalry"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" donotallowfullscreen ></iframe>
   ) : (
     <img src={selectedMedia} alt="Selected Media" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-  )}
+  
+  ) }
+  
+ 
+
 </Modal>
 
 

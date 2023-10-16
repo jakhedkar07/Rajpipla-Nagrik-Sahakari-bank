@@ -1,10 +1,10 @@
 /* src/components/Carousel.css */
 .slides img{
-  height:600px ;
+  height:500px ;
 }
 
 .images{
-  width: 70%;
+  width: 65%;
 }
 .slides{
   z-index: 0;
@@ -30,7 +30,7 @@ color: black;
 
   .image p{
     color: black;
-    font-size: 24px;
+    font-size: 20px;
   }
 .image img{
     height: 400px;

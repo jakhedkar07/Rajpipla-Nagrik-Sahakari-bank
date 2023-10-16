@@ -27,8 +27,8 @@
 
 .I img
     {
-    width:80%;
-    height:80%;
+    width:70%;
+    height:40%;
     margin:50px auto;
     align-items:center;
     justify-content:center;
@@ -41,6 +41,7 @@
 
   .I img{
     height: 100%;
+    width: 80%;
   }
 
 }

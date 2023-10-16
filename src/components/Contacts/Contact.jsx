@@ -13,14 +13,17 @@ import React from 'react'
       <header>
         <h1>CONTACT US</h1>
         <p>LET’S CONNECT: WE’RE HERE TO HELP, AND WE’D LOVE TO HEAR FROM YOU! WHETHER YOU HAVE A QUESTION, COMMENT, OR JUST WANT TO CHAT , YOU CAN REACH OUT TO US THROUGH THE CONTACT FORM OF THIS PAGE, OR BY PHONE, EMAIL, OR SOCIAL MEDIA. </p>
-      </header>
-      <div className={styles.form} >
+      
+        </header>
+        <div className={styles.form} >
       <div className={styles.buttons}>
         
           <button>Via Email</button>
           <button>Via Call</button>
       
       </div>
+      
+     
       <div className={styles.form_control}>
       <label htmlFor="name">Name</label>
       <input type="text" name="name" />
