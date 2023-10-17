@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from "./financial.module.css";
 import { Link } from 'react-router-dom';
-
+import i18n from "i18next";
+import { withTranslation } from "react-i18next";
 const Financial = () => {
   return (
     <>
@@ -20,4 +21,4 @@ const Financial = () => {
   )
 }
 
-export default Financial
+export default withTranslation()(Financial)
